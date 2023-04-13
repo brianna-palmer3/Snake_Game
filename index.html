@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewpoint" , content="width=device-width, initial-scale=1.0">
+  <title>Snake Game</title>
+  <link rel="stylesheet" href="snake.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <!--Header-->
+    <h1 class="snake-title">Snake Game</h1>
+    <!--how to play-->
+    <h2 id="how">How to Play:</h2>
+    <p class="snake-p">Use keyboard arrows or buttons.<br><br>1. The snake only grows when it eats the food.<br>
+      <br>2. Do not hit the walls.<br><br>3. Do not let the snake eat itself.<br><br>4. Do not go backwards.<br><br>5.
+      Each time you fail the game gets faster.<br>
+      <br>Have Fun Playing!
+    </p>
+
+    <!--Menu Container-->
+    <br>
+    <p class="snake-high-score">High Score</p>
+    <p class="snake-high-score">0</p>
+    <div id="menu-container">
+      <button class="menu-play-button" onclick="createBoard()">Play</button>
+    </div>
+    <!--container-->
+    <div id="game-container">
+      <!--Score-->
+      <button id="replay" onclick="startGame()">Replay</button>
+      <p class="snake-score">Score</p>
+      <p class="snake-score" id="score">0</p>
+      <!--canvas-->
+      <canvas id="snakeGame" width="400" height="400">
+      </canvas>
+
+      <!--Game Over-->
+      <div id="game-over">
+        <h1 class="game-over-title">Game Over</h1>
+        <button class="game-over-button" onclick="createBoard()">Play Again</button>
+      </div>
+    </div>
+
+    <script src="snake.js" defer></script>
+</body>
+
+</html>
